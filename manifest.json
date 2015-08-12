@@ -1,0 +1,15 @@
+{
+  "manifest_version": 2,
+
+  "name": "Block W3Schools",
+  "description": "This extensions blocks results from w3schools.com in your Google search results.",
+  "version": "0.1",
+
+  "content_scripts": [ {
+     "css": [ "contentstyles.css" ],
+     "include_globs": [ "http://www.google.*/*", "https://www.google.*/*" ],
+     "js": [ "contentscripts.js" ],
+     "matches": [ "http://*/*", "https://*/*" ],
+     "run_at": "document_idle"
+  } ]
+}
